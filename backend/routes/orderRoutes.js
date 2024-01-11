@@ -23,7 +23,7 @@ router
 
 router
     .route('/:id')
-    .get(protect, admin, getOrderById);
+    .get(protect, getOrderById);
 
 router
     .route('/:id/pay')
