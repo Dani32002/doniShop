@@ -8,6 +8,7 @@ import logo from "../assets/logo.png"
 import { useSelector, useDispatch } from "react-redux"
 import { LinkContainer } from "react-router-bootstrap"
 import SearchBox from './SearchBox'
+import { resetCart } from '../slices/cartSlice'
 
 const Header = () => {
 
@@ -23,7 +24,8 @@ const Header = () => {
     try {
         await logoutApiCall().unwrap();
         dispatch(logout());
-        navigate('/login')
+        dispatch(resetCart());
+        navigate('/login');
     } catch (error) {
         console.log(error);
     }

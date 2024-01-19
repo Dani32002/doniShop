@@ -127,7 +127,7 @@ const PlaceOrder = () => {
                             </Row>
                         </ListGroup.Item>
                         <ListGroup.Item>
-                            { error && <Message variant='danger'>{ error.message }</Message> }
+                            { error && <Message variant='danger'>{ error?.data?.message }</Message> }
                         </ListGroup.Item>
                         <ListGroup.Item>
                             <Button type='button' 
